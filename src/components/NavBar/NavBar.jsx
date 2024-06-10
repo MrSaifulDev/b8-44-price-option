@@ -1,8 +1,15 @@
+
+import { useState } from "react";
 import Link from "../Link/Link";
+import { HiMenuAlt1 } from "react-icons/hi";
+import { IoMdClose } from "react-icons/io";
 
 
 
 const NavBar = () => {
+
+const [open, setOpen] = useState(false)
+
   const routes = [
     {
       id: 1,
@@ -41,9 +48,28 @@ const NavBar = () => {
     },
   ];
 
+
   return (
-    <nav>
-      <ul className="md:flex">
+    <nav className="bg-yellow-200 p-3"> 
+      
+
+
+      <div className="text-2xl md:hidden"  onClick={() => setOpen(!open)}>
+        {
+          open == true ? <HiMenuAlt1 /> : <IoMdClose />
+          
+        }
+        
+      </div>
+
+      <ul className={`
+        
+        md:flex  duration-2000 absolute md:static
+        ${open ? 'top-13' : '-top-60'}
+        bg-yellow-200 px-6 
+        `        
+        }>
+          
         {
             routes.map(route => <Link key={route.id} route={route}> </Link> )
         }
