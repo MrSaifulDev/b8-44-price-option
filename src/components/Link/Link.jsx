@@ -9,6 +9,7 @@ const Link = ({route}) => {
     <li  className="mr-3 hover:bg-yellow-600 px-4">
       <a href={route.path}>{route.name}</a>
     </li>
+    
   );
 };
 
