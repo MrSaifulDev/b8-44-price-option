@@ -70,7 +70,7 @@ const PriceOptions = () => {
 ] ;
 
     
-  console.log(priceItems)
+  
 
     return (
         <div>

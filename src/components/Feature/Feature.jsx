@@ -2,8 +2,6 @@ import { FaCircle } from "react-icons/fa";
 
 const Feature = ({feature}) => {
 
-    console.log(feature)
-
 
     return (
         <div>

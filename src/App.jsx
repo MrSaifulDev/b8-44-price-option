@@ -7,6 +7,8 @@ import LineChart from './components/LineChart/LineChart'
 
 function App() {
 
+  console.log('app')
+
 
   return (
    <div>

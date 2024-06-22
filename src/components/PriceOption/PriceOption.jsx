@@ -2,7 +2,7 @@ import Feature from "../Feature/Feature";
 
 const PriceOption = ({ option }) => {
 
-    console.log(option)
+    
 
   const { name, price, features } = option;
 
