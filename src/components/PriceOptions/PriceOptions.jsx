@@ -4,8 +4,8 @@ import PriceOption from "../PriceOption/PriceOption";
 
 const PriceOptions = () => {
 
-  const priceItems = [ {
-    "1": {
+  const priceItems = [ 
+     {
       "id": 1,
       "name": "Basic Membership",
       "price": 29.99,
@@ -15,7 +15,7 @@ const PriceOptions = () => {
         "Locker room access"
       ]
     },
-    "2": {
+     {
       "id": 2,
       "name": "Premium Membership",
       "price": 49.99,
@@ -25,7 +25,7 @@ const PriceOptions = () => {
         "Personal training session discount"
       ]
     },
-    "3": {
+     {
       "id": 3,
       "name": "Executive Membership",
       "price": 79.99,
@@ -36,7 +36,7 @@ const PriceOptions = () => {
         "Sauna and steam room access"
       ]
     },
-    "4": {
+    {
       "id": 4,
       "name": "Student Membership",
       "price": 24.99,
@@ -46,7 +46,7 @@ const PriceOptions = () => {
         "Limited access to group fitness classes"
       ]
     },
-    "5": {
+    {
       "id": 5,
       "name": "Family Membership",
       "price": 99.99,
@@ -56,7 +56,7 @@ const PriceOptions = () => {
         "Access to family-oriented fitness programs"
       ]
     },
-    "6": {
+    {
       "id": 6,
       "name": "Corporate Membership",
       "price": 69.99,
@@ -66,16 +66,21 @@ const PriceOptions = () => {
         "Specialized group fitness classes"
       ]
     }
-  }
+  
 ] ;
 
     
+  console.log(priceItems)
+
     return (
         <div>
+          
             <h2 className="text-2xl">Best price in the town</h2>
-            {
-                priceItems.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
-            }
+           <div className="grid md:grid-cols-3 gap-4"> 
+              {
+                    priceItems.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
+                }
+           </div>
 
            
         </div>

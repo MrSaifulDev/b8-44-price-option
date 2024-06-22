@@ -12,9 +12,14 @@ function App() {
    <div>
 
     <NavBar></NavBar>
-    <DaisyNav></DaisyNav>
+   
+   <div className='mx-4'>
+   <DaisyNav></DaisyNav>
     <PriceOptions></PriceOptions>
+
+    
     <LineChart></LineChart>
+   </div>
 
 
 
